@@ -34,11 +34,9 @@ export class QuoteCardComponent implements OnInit {
   }
   addNewQuote(QuoteConstructor){
     
-    this.quotes.push(QuoteConstructor.quoteWritter);
+    
     this.quotes.push(QuoteConstructor.quote);
-    this.quotes.push(QuoteConstructor.quotePoster);
-    this.quotes.push(QuoteConstructor.upvotes);
-    this.quotes.push(QuoteConstructor.downvotes);
+    
     QuoteConstructor.timePassed = new Date(QuoteConstructor.timePassed);
   }
  

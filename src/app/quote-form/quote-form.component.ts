@@ -12,10 +12,17 @@ export class QuoteFormComponent implements OnInit {
   newQuoteConstructor = new QuoteConstructor('','','',0,0,new Date());
   @Output() addQuote = new EventEmitter<QuoteConstructor>();
 
+  message = [];  
+  quote: string;
+  quoteWritter: string;
+  quotePoster: string;
+  upvotes: number;
+  downvotes: number;
   
 
   submitQuote(){
-    this.addQuote.emit(this.newQuoteConstructor);
+    this.newQuoteConstructor= new QuoteConstructor(this.quote,this.quoteWritter,this.quotePoster,this.upvotes,this.downvotes,new Date());
+    this.message.push(this.newQuoteConstructor);
       }
   constructor() { }
 
