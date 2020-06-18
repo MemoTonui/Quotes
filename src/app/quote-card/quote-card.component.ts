@@ -16,9 +16,9 @@ export class QuoteCardComponent implements OnInit {
      new QuoteConstructor ('Mother Teressa','Spread love everywhere you go. Let no one ever come to you without leaving happier.','Wachira Joan',0,0,new Date(2020,6,25))
    ]
 
-   addNewQuote(quote){ 
-    quote.timePassed = new Date();
-    this.quotes.push(quote);
+   addNewQuote(QuoteConstructor){ 
+    QuoteConstructor.timePassed = new Date();
+    this.quotes.push(QuoteConstructor);
     console.log(this.quotes);
     
   }

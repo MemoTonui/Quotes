@@ -6,19 +6,19 @@
         <div class="form-group">
   
             <label for="name">Quote by:</label>
-            <input type="text" required class="form-control" [(ngModel)]="newQuoteConstructor.quoteWritter" id="name">
+            <input type="text" required class="form-control" [(ngModel)]="newQuoteConstructor.quoteWritter" [ngModelOptions]="{standalone: true}" id="name">
   
         </div>
         <div class="form-group">
   
             <label for="description">Quote:</label>
-            <textarea class="form-control" id="description" rows="4" [(ngModel)]="newQuoteConstructor.quote" required></textarea>
+            <textarea class="form-control" id="description" rows="4" [(ngModel)]="newQuoteConstructor.quote" [ngModelOptions]="{standalone: true}" required></textarea>
   
         </div>
         <div class="form-group">
   
-            <label for="description">Posted by:</label>
-            <input type="text" required class="form-control" [(ngModel)]="newQuoteConstructor.quotePoster" id="name">
+            <label for="poster">Posted by:</label>
+            <input type="text" required class="form-control" [(ngModel)]="newQuoteConstructor.quotePoster" [ngModelOptions]="{standalone: true}" id="poster">
   
         </div>
         <button  type="submit" class="btn btn-dark ">POST</button>
