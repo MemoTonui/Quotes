@@ -7,7 +7,7 @@
           <p class="card-text"> {{quote.quote}} <br>  <small> ~{{quote.quoteWritter}}</small></p>
           <p class="card-text text-muted">Written by :{{quote.quotePoster}}</p>
           <button class="btn btn-info" (click)='toggleDetails(i)'>Show Details</button>
-         <app-quote-details *ngIf = 'quote.showDescription'></app-quote-details>
+         <app-quote-details *ngIf = 'quote.showDescription' [quote]='quote'></app-quote-details>
         </div>
       </div>
     </div>
