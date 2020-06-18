@@ -10,7 +10,7 @@ import { Quote } from '@angular/compiler';
 export class QuoteCardComponent implements OnInit {
 
    quotes:QuoteConstructor[]=[
-     new QuoteConstructor ('Nelson Mandela','"The greatest glory in living lies not in never falling, but in rising every time we fall."','Linda Tonui',0,0,new Date(2020,6,8)),
+     new QuoteConstructor ('Nelson Mandela','"The greatest glory in living lies not in never falling, but in rising every time we fall."','Linda Tonui',1,0,new Date(2020,6,8)),
      new QuoteConstructor ('Oprah Winfrey','"If you look at what you have in life, you will always have more. If you look at what you do not have in life, you will never have enough."','Linda Tonui',0,0,new Date(2020,6,8))
    ]
 
@@ -32,6 +32,16 @@ export class QuoteCardComponent implements OnInit {
       }
     }
   }
+  addNewQuote(QuoteConstructor){
+    
+    this.quotes.push(QuoteConstructor.quoteWritter);
+    this.quotes.push(QuoteConstructor.quote);
+    this.quotes.push(QuoteConstructor.quotePoster);
+    this.quotes.push(QuoteConstructor.upvotes);
+    this.quotes.push(QuoteConstructor.downvotes);
+    QuoteConstructor.timePassed = new Date(QuoteConstructor.timePassed);
+  }
+ 
      
 
   constructor() { }
