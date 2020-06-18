@@ -1,0 +1,10 @@
+.card{
+    margin-right: 100px;
+    margin-top: 80px;
+    float: left;
+    width:100%;
+}
+.fa{
+    padding: 10px;
+    font-size: 30px;
+}

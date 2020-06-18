@@ -1,1 +1,14 @@
-<p>quote-card works!</p>
+<div class="container ">
+ <div class="row">
+  <div class="col-md-3 "*ngFor= 'let quote of quotes'>
+    <div class="card">
+        <div class="card-body"  >
+          <h5 class="card-title"></h5>
+          <p class="card-text"> {{quote.quote}} <br>  <small> ~{{quote.quoteWritter}}</small></p>
+          <p class="card-text text-muted">Written by :{{quote.quotePoster}}</p>
+         
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
