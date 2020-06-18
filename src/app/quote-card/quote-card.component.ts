@@ -10,9 +10,18 @@ import { Quote } from '@angular/compiler';
 export class QuoteCardComponent implements OnInit {
 
    quotes:QuoteConstructor[]=[
-     new QuoteConstructor ('Nelson Mandela','"The greatest glory in living lies not in never falling, but in rising every time we fall."','Linda Tonui',1,0,new Date(2020,6,8)),
-     new QuoteConstructor ('Oprah Winfrey','"If you look at what you have in life, you will always have more. If you look at what you do not have in life, you will never have enough."','Linda Tonui',0,0,new Date(2020,6,8))
+     new QuoteConstructor ('Nelson Mandela','The greatest glory in living lies not in never falling, but in rising every time we fall.','Linda Tonui',1,0,new Date(2020,6,8)),
+     new QuoteConstructor ('Aristotle','It is during our darkest moments that we must focus to see the light.','Linda Tonui',0,0,new Date(2020,6,8)),
+     new QuoteConstructor ('John Lennon','Life is what happens when you are busy making other plans.','Brian Yegon',0,0,new Date(2020,5,12)),
+     new QuoteConstructor ('Mother Teressa','Spread love everywhere you go. Let no one ever come to you without leaving happier.','Wachira Joan',0,0,new Date(2020,6,25))
    ]
+
+   addNewQuote(quote){ 
+    quote.timePassed = new Date();
+    this.quotes.push(quote);
+    console.log(this.quotes);
+    
+  }
 
    toggleDetails(index){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
@@ -31,13 +40,6 @@ export class QuoteCardComponent implements OnInit {
         this.quotes.splice(index,1)
       }
     }
-  }
-  addNewQuote(QuoteConstructor){
-    
-    
-    this.quotes.push(QuoteConstructor.quote);
-    
-    QuoteConstructor.timePassed = new Date(QuoteConstructor.timePassed);
   }
  
      

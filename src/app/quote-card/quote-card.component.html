@@ -10,7 +10,7 @@
     <div class="card">
         <div class="card-body"  >
           
-          <p class="card-text"> {{quote.quote}} <br>  <small> ~{{quote.quoteWritter}}</small></p>
+          <p class="card-text"> "{{quote.quote}}"<br>  <small> ~{{quote.quoteWritter}}</small></p>
           <p class="card-text text-muted"><small style="font-style: italic;"> Written by :{{quote.quotePoster}} <br>Posted {{quote.timePassed|dateCount}} days ago</small></p>
           <button class="btn btn-info" (click)='toggleDetails(i)'>Show Details</button>
          <app-quote-details *ngIf = 'quote.showDescription' [quote]='quotes'  (upvote)='addUpvotes($event,i)' (downvote)= 'addDownvotes($event,i)' (isComplete) = 'deleteQuote($event,i)'></app-quote-details>
