@@ -11,6 +11,7 @@ export class QuoteDetailsComponent implements OnInit {
   @Input() quote: QuoteConstructor;
   @Output() upvote= new EventEmitter<boolean>();
   @Output() downvote = new EventEmitter<boolean>();
+  @Output() isComplete = new EventEmitter<boolean>();
 
    addUpvote (add :true){
      this.upvote.emit(add);
@@ -18,6 +19,9 @@ export class QuoteDetailsComponent implements OnInit {
    addDownvote (remove :true){
      this.downvote.emit(remove);
    }
+   quoteDelete(complete:boolean){
+    this.isComplete.emit(complete);
+  }
 
   constructor() { }
 

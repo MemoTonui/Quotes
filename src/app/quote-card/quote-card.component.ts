@@ -23,6 +23,15 @@ export class QuoteCardComponent implements OnInit {
   addDownvotes(downvote,i) {
     this.quotes[i].downvotes  ++;
   }
+  deleteQuote(isComplete, index){
+    if (isComplete) {
+      let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].quoteWritter}?'s quote?`)
+
+      if (toDelete){
+        this.quotes.splice(index,1)
+      }
+    }
+  }
      
 
   constructor() { }

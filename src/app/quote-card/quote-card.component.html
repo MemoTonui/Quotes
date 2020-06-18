@@ -3,11 +3,11 @@
   <div class="col-md-3 "*ngFor= 'let quote of quotes;let i =index'>
     <div class="card">
         <div class="card-body"  >
-          <h5 class="card-title"></h5>
+          
           <p class="card-text"> {{quote.quote}} <br>  <small> ~{{quote.quoteWritter}}</small></p>
-          <p class="card-text text-muted"><small style="font-style: italic;"> Written by :{{quote.quotePoster}} | {{quote.timePassed|date}} </small></p>
+          <p class="card-text text-muted"><small style="font-style: italic;"> Written by :{{quote.quotePoster}} <br>Posted {{quote.timePassed|dateCount}} days ago</small></p>
           <button class="btn btn-info" (click)='toggleDetails(i)'>Show Details</button>
-         <app-quote-details *ngIf = 'quote.showDescription' [quote]='quotes'  (upvote)='addUpvotes($event,i)' (downvote)= 'addDownvotes($event,i)'></app-quote-details>
+         <app-quote-details *ngIf = 'quote.showDescription' [quote]='quotes'  (upvote)='addUpvotes($event,i)' (downvote)= 'addDownvotes($event,i)' (isComplete) = 'deleteQuote($event,i)'></app-quote-details>
         </div>
       </div>
     </div>
