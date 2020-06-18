@@ -1,6 +1,6 @@
 
 <p class="card-text" >
-    <small class="text-muted"><i class="fa fa-thumbs-o-up" (click)='addUpvote(true)' aria-hidden="true"></i>{{quote.upvotes}}
-    <i class="fa fa-thumbs-o-down"(click)='addDownvote(true)' aria-hidden="true" >{{quote.downvotes}}</i><i class="fa fa-trash-o pull-right" (click)= 'quoteDelete(true)' aria-hidden="true"></i>
+    <small class="text-muted"><i type=submit class="fa fa-thumbs-o-up" (click)='upVote()' aria-hidden="true">{{quote.upvotes}}</i>
+    <i class="fa fa-thumbs-o-down"(click)='downVote()' aria-hidden="true" >{{quote.downvotes}}</i><i class="fa fa-trash-o pull-right" (click)= 'quoteDelete(true)' aria-hidden="true"></i>
 </small>
 </p>
