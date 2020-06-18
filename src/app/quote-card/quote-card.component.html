@@ -5,9 +5,9 @@
         <div class="card-body"  >
           <h5 class="card-title"></h5>
           <p class="card-text"> {{quote.quote}} <br>  <small> ~{{quote.quoteWritter}}</small></p>
-          <p class="card-text text-muted">Written by :{{quote.quotePoster}}</p>
+          <p class="card-text text-muted"><small style="font-style: italic;"> Written by :{{quote.quotePoster}} | {{quote.timePassed|date}} </small></p>
           <button class="btn btn-info" (click)='toggleDetails(i)'>Show Details</button>
-         <app-quote-details *ngIf = 'quote.showDescription' [quote]='quote'></app-quote-details>
+         <app-quote-details *ngIf = 'quote.showDescription' [quote]='quotes'  (upvote)='addUpvotes($event,i)' (downvote)= 'addDownvotes($event,i)'></app-quote-details>
         </div>
       </div>
     </div>
