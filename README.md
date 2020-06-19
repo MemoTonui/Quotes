@@ -1,6 +1,26 @@
 # Quotes
 
+This Project  displays quotes and allows you to post your own quotes and tracks how many days ago you posted it.
+It also allows you to vote on your best quote.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+
+## Author's Name
+Linda Tonui
+
+## Technologies Used
+- HTML
+- CSS
+- Terminal
+- Git
+- Vs Code
+- Angular
+
+## Bugs And Errors
+Upcount and downcount functions  return the value NaN
+
+# Link to live site on Git Hub Pages
+`https://memotonui.github.io/Quotes/`
 
 ## Development server
 
@@ -19,7 +39,6 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 ## Running end-to-end tests
-
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Further help
