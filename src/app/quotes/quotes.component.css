@@ -1,3 +1,4 @@
 div{
-    background-color: bisque;
+    background: rgb(77,63,251);
+    background: radial-gradient(circle, rgb(177, 172, 247) 13%, rgb(250, 142, 165) 84%);
 }

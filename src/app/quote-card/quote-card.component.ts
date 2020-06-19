@@ -15,11 +15,10 @@ export class QuoteCardComponent implements OnInit {
      new QuoteConstructor ('John Lennon','Life is what happens when you are busy making other plans.','Brian Yegon',0,0,new Date(2020,5,12)),
      new QuoteConstructor ('Mother Teressa','Spread love everywhere you go. Let no one ever come to you without leaving happier.','Wachira Joan',0,6,new Date(2020,6,25))
    ]
-
    
-   addNewQuote(QuoteConstructor){ 
-    QuoteConstructor.timePassed = new Date();
-    this.quotes.push(QuoteConstructor);
+   addNewQuote(chosenQuote){ 
+    chosenQuote.timePassed = new Date();
+    this.quotes.push(chosenQuote);
     console.log(this.quotes);
     
   }
