@@ -17,7 +17,12 @@ Linda Tonui
 - Angular
 
 ## Bugs And Errors
-Upcount and downcount functions  return the value NaN
+- Upcount and downcount functions  return the value NaN
+
+## Setup Instructions
+- Clone or download and unzip the repository from github, `https://github.com/memotonui/Quotes-/`.
+- git clone  `https://github.com/memotonui/Quotes-/` to get the project on your PC.
+- Run ng serve from your terminal
 
 # Link to live site on Git Hub Pages
 `https://memotonui.github.io/Quotes/`
